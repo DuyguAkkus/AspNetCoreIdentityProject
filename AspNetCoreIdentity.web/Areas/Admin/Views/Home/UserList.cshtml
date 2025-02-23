@@ -1,0 +1,28 @@
+@model List<AspNetCoreIdentitiy.web.Areas.Admin.Models.UserViewModel>
+
+@{
+    ViewBag.Title = "Kullanıcı Listesi";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2> <!-- ViewBag başlığını dinamik olarak kullan -->
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Kullanıcı Adı</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td> <!-- "Name" yerine "UserName" düzeltilmeli -->
+            <td>@item.Email</td>
+        </tr>
+    }
+    </tbody>
+</table>

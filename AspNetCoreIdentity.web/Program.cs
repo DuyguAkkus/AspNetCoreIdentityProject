@@ -48,12 +48,19 @@ app.UseHttpsRedirection(); // HTTP isteklerini HTTPS'e yönlendir
 app.UseRouting(); // MVC yönlendirme mekanizmasını etkinleştir
 app.UseAuthorization(); // Yetkilendirme mekanizmasını etkinleştir
 
+
+app.MapControllerRoute(
+        name: "areas",
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}") 
+    .WithStaticAssets(); 
+
+
 app.MapStaticAssets(); // Statik dosyaları (CSS, JS, resimler) yönet
 
 // **Varsayılan Rota Tanımı**
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=SignUp}/{id?}") // Varsayılan olarak HomeController ve Index metodu çalışacak
+    pattern: "{controller=Home}/{action=Index}/{id?}") // Varsayılan olarak HomeController ve Index metodu çalışacak
     .WithStaticAssets(); // Statik dosyalarla uyumlu hale getir
 
 app.Run(); // Uygulamayı çalıştır

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wWezG/rtFLYTBS9O2r2M2c7ivxb+ZoprXeNFgRWWuJ4=",
+  "Hash": "Yq92bmpv2jCBVCXEIzgVE+HEJbVKGt7OholczO0lV5Y=",
   "Source": "AspNetCoreIdentity.web",
   "BasePath": "_content/AspNetCoreIdentity.web",
   "Mode": "Default",
@@ -269,12 +269,12 @@
       "OriginalItemSpec": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-p54djn8ht2.gz",
+      "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-k5dnbnkovk.gz",
       "SourceId": "AspNetCoreIdentity.web",
       "SourceType": "Computed",
       "ContentRoot": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/AspNetCoreIdentity.web",
-      "RelativePath": "AspNetCoreIdentity.web#[.{fingerprint=p54djn8ht2}]?.styles.css.gz",
+      "RelativePath": "AspNetCoreIdentity.web#[.{fingerprint=k5dnbnkovk}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -283,8 +283,8 @@
       "RelatedAsset": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/bundle/AspNetCoreIdentity.web.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "wa2l6dehmk",
-      "Integrity": "6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=",
+      "Fingerprint": "tfbl7z3u42",
+      "Integrity": "KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/bundle/AspNetCoreIdentity.web.styles.css"
@@ -1193,12 +1193,12 @@
       "OriginalItemSpec": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-p54djn8ht2.gz",
+      "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-k5dnbnkovk.gz",
       "SourceId": "AspNetCoreIdentity.web",
       "SourceType": "Computed",
       "ContentRoot": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/AspNetCoreIdentity.web",
-      "RelativePath": "AspNetCoreIdentity.web#[.{fingerprint=p54djn8ht2}]!.bundle.scp.css.gz",
+      "RelativePath": "AspNetCoreIdentity.web#[.{fingerprint=k5dnbnkovk}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -1207,8 +1207,8 @@
       "RelatedAsset": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/projectbundle/AspNetCoreIdentity.web.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "wa2l6dehmk",
-      "Integrity": "6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=",
+      "Fingerprint": "tfbl7z3u42",
+      "Integrity": "KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/projectbundle/AspNetCoreIdentity.web.bundle.scp.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "p54djn8ht2",
-      "Integrity": "TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=",
+      "Fingerprint": "k5dnbnkovk",
+      "Integrity": "qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/bundle/AspNetCoreIdentity.web.styles.css"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "p54djn8ht2",
-      "Integrity": "TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=",
+      "Fingerprint": "k5dnbnkovk",
+      "Integrity": "qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/projectbundle/AspNetCoreIdentity.web.bundle.scp.css"
@@ -2729,12 +2729,12 @@
   "Endpoints": [
     {
       "Route": "AspNetCoreIdentity.web.bundle.scp.css",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-p54djn8ht2.gz",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-k5dnbnkovk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001828153565"
+          "Quality": "0.001602564103"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +2744,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,13 +2772,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "W/\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
@@ -2793,7 +2793,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1091"
+          "Value": "2194"
         },
         {
           "Name": "Content-Type",
@@ -2801,11 +2801,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2815,13 +2815,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
     {
       "Route": "AspNetCoreIdentity.web.bundle.scp.css.gz",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-p54djn8ht2.gz",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-k5dnbnkovk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2830,7 +2830,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "Content-Type",
@@ -2838,11 +2838,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2860,18 +2860,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ="
+          "Value": "sha256-KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4="
         }
       ]
     },
     {
-      "Route": "AspNetCoreIdentity.web.p54djn8ht2.bundle.scp.css",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-p54djn8ht2.gz",
+      "Route": "AspNetCoreIdentity.web.k5dnbnkovk.bundle.scp.css",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-k5dnbnkovk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001828153565"
+          "Quality": "0.001602564103"
         }
       ],
       "ResponseHeaders": [
@@ -2881,15 +2881,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2909,13 +2909,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "W/\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p54djn8ht2"
+          "Value": "k5dnbnkovk"
         },
         {
           "Name": "label",
@@ -2923,12 +2923,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
     {
-      "Route": "AspNetCoreIdentity.web.p54djn8ht2.bundle.scp.css",
+      "Route": "AspNetCoreIdentity.web.k5dnbnkovk.bundle.scp.css",
       "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/projectbundle/AspNetCoreIdentity.web.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2938,7 +2938,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1091"
+          "Value": "2194"
         },
         {
           "Name": "Content-Type",
@@ -2946,11 +2946,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2960,7 +2960,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p54djn8ht2"
+          "Value": "k5dnbnkovk"
         },
         {
           "Name": "label",
@@ -2968,13 +2968,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
     {
-      "Route": "AspNetCoreIdentity.web.p54djn8ht2.bundle.scp.css.gz",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-p54djn8ht2.gz",
+      "Route": "AspNetCoreIdentity.web.k5dnbnkovk.bundle.scp.css.gz",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/vbgp7bnl5z-k5dnbnkovk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2983,7 +2983,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "Content-Type",
@@ -2991,11 +2991,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3013,7 +3013,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p54djn8ht2"
+          "Value": "k5dnbnkovk"
         },
         {
           "Name": "label",
@@ -3021,18 +3021,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ="
+          "Value": "sha256-KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4="
         }
       ]
     },
     {
-      "Route": "AspNetCoreIdentity.web.p54djn8ht2.styles.css",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-p54djn8ht2.gz",
+      "Route": "AspNetCoreIdentity.web.k5dnbnkovk.styles.css",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-k5dnbnkovk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001828153565"
+          "Quality": "0.001602564103"
         }
       ],
       "ResponseHeaders": [
@@ -3042,15 +3042,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3070,13 +3070,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "W/\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p54djn8ht2"
+          "Value": "k5dnbnkovk"
         },
         {
           "Name": "label",
@@ -3084,12 +3084,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
     {
-      "Route": "AspNetCoreIdentity.web.p54djn8ht2.styles.css",
+      "Route": "AspNetCoreIdentity.web.k5dnbnkovk.styles.css",
       "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/scopedcss/bundle/AspNetCoreIdentity.web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3099,7 +3099,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1091"
+          "Value": "2194"
         },
         {
           "Name": "Content-Type",
@@ -3107,11 +3107,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3121,7 +3121,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p54djn8ht2"
+          "Value": "k5dnbnkovk"
         },
         {
           "Name": "label",
@@ -3129,13 +3129,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
     {
-      "Route": "AspNetCoreIdentity.web.p54djn8ht2.styles.css.gz",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-p54djn8ht2.gz",
+      "Route": "AspNetCoreIdentity.web.k5dnbnkovk.styles.css.gz",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-k5dnbnkovk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3144,7 +3144,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "Content-Type",
@@ -3152,11 +3152,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3174,7 +3174,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p54djn8ht2"
+          "Value": "k5dnbnkovk"
         },
         {
           "Name": "label",
@@ -3182,18 +3182,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ="
+          "Value": "sha256-KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4="
         }
       ]
     },
     {
       "Route": "AspNetCoreIdentity.web.styles.css",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-p54djn8ht2.gz",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-k5dnbnkovk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001828153565"
+          "Quality": "0.001602564103"
         }
       ],
       "ResponseHeaders": [
@@ -3203,15 +3203,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3231,13 +3231,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "W/\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
@@ -3252,7 +3252,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1091"
+          "Value": "2194"
         },
         {
           "Name": "Content-Type",
@@ -3260,11 +3260,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ=\""
+          "Value": "\"qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3274,13 +3274,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TcXkAvgha/UQgstzuboJ4S+Z+bKpDM/sVLY63ctKYZQ="
+          "Value": "sha256-qHaeINWYCB68kUogorKqsI1iw5xjPmTwyzspy0NVa9M="
         }
       ]
     },
     {
       "Route": "AspNetCoreIdentity.web.styles.css.gz",
-      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-p54djn8ht2.gz",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/obj/Debug/net9.0/compressed/6xev8e98z7-k5dnbnkovk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3289,7 +3289,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "546"
+          "Value": "623"
         },
         {
           "Name": "Content-Type",
@@ -3297,11 +3297,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ=\""
+          "Value": "\"KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:44:35 GMT"
+          "Value": "Sun, 23 Feb 2025 14:49:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3319,7 +3319,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6DgegQUIxXQ5PdNl+m+J4r77i7GlwmPMR6vzJHJunEQ="
+          "Value": "sha256-KbBrnE4aZOhkjfWTEdW5LfFieg/wj926DhXsNq8gzx4="
         }
       ]
     },
