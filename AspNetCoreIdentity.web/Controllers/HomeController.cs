@@ -36,15 +36,9 @@ namespace AspNetCoreIdentitiy.web.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpViewModel request)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) // Form alanlarını doğrula
             {
-                return View(request);
-            }
-
-            if (_userManager == null) // 🚨 UserManager'in null olup olmadığını kontrol et
-            {
-                ModelState.AddModelError(string.Empty, "Kullanıcı yönetim servisi başlatılamadı.");
-                return View(request);
+                return View(request); // Hataları tekrar göster
             }
 
             var newUser = new AppUser
@@ -58,13 +52,13 @@ namespace AspNetCoreIdentitiy.web.Controllers
 
             if (identityResult.Succeeded)
             {
-                ViewBag.SuccessMessage = "Üyelik işlemi başarıyla gerçekleşmiştir 🙂";
-                return View();
+                TempData["SuccessMessage"] = "Kayıt başarıyla gerçekleşti!";
+                return RedirectToAction("SignUp");
             }
 
-            foreach (var item in identityResult.Errors)
+            foreach (var error in identityResult.Errors)
             {
-                ModelState.AddModelError(string.Empty, item.Description);
+                ModelState.AddModelError(string.Empty, error.Description);
             }
 
             return View(request);
