@@ -3,48 +3,67 @@ using Microsoft.AspNetCore.Mvc;
 using AspNetCoreIdentitiy.web.Models;
 using AspNetCoreIdentitiy.web.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using AspNetCoreIdentitiy.web.Extensions;
 
 namespace AspNetCoreIdentitiy.web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly UserManager<AppUser> _userManager; // ✅ UserManager eklendi
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        // ✅ UserManager parametre olarak alınıp constructor içinde atandı
-        public HomeController(ILogger<HomeController> logger, UserManager<AppUser> userManager)
+        public HomeController(ILogger<HomeController> logger, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             _logger = logger;
-            _userManager = userManager ?? throw new ArgumentNullException(nameof(userManager)); // 🔥 Null kontrolü eklendi
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        public IActionResult Privacy() => View();
 
-        public IActionResult SignUp()
-        {
-            return View();
-        }
-        public IActionResult SignIn()
-        {
-            return View();
-        }
+        public IActionResult SignUp() => View();
+
+        public IActionResult SignIn() => View();
         
-        
+        [HttpPost]
+        public async Task<IActionResult> SignIn(SignInViewModel model, string? returnUrl = null)
+        {
+            returnUrl ??= Url.Action("Index", "Home");
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var hasUser = await _userManager.FindByEmailAsync(model.Email);
+
+            if (hasUser == null)
+            {
+                ModelState.AddModelError(string.Empty, "Email veya şifre yanlış.");
+                return View(model);
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(hasUser, model.Password, model.RememberMe, false);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home"); // ✅ Giriş başarılıysa Home/Index sayfasına yönlendir
+            }
+
+            ModelState.AddModelError(string.Empty, "Email veya şifre yanlış.");
+            return View(model);
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpViewModel request)
         {
-            if (!ModelState.IsValid) // Form alanlarını doğrula
+            if (!ModelState.IsValid)
             {
-                return View(request); // Hataları tekrar göster
+                return View(request);
             }
 
             var newUser = new AppUser
@@ -59,13 +78,11 @@ namespace AspNetCoreIdentitiy.web.Controllers
             if (identityResult.Succeeded)
             {
                 TempData["SuccessMessage"] = "Kayıt başarıyla gerçekleşti!";
-                return RedirectToAction("SignUp");
+                return RedirectToAction("SignIn");
             }
 
-            foreach (var error in identityResult.Errors)
-            {
-                ModelState.AddModelError(string.Empty, error.Description);
-            }
+            // ✅ **ModelStateExtensions Kullanımı**
+            ModelState.AddModelErrorList(identityResult.Errors.Select(e => e.Description).ToList());
 
             return View(request);
         }

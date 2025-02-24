@@ -16,10 +16,11 @@ namespace AspNetCoreIdentitiy.web.ViewModels
 
         [Required(ErrorMessage = "E-posta alanı gereklidir.")]
         [EmailAddress(ErrorMessage = "Geçerli bir e-posta adresi giriniz.")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required(ErrorMessage = "Şifre alanı gereklidir.")]
         [MinLength(6, ErrorMessage = "Şifre en az 6 karakter olmalıdır.")]
-        public string Password { get; set; }
+        public string? Password { get; set; }
+        public bool RememberMe { get; set; } // **Eksik olan özellik eklendi**
     }
 }

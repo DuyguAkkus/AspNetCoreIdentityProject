@@ -5,8 +5,8 @@
     Layout = "_Layout";
 }
 
-<div class="d-flex justify-content-center align-items-start vh-100 mt-5">
-    <div class="card shadow-lg p-4" style="width: 550px; border-radius: 12px;">
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 450px; width: 100%; border-radius: 12px;">
         <h2 class="fw-light text-center mb-4">Kayıt Ol</h2>
 
         @if (TempData["SuccessMessage"] != null)
@@ -17,53 +17,45 @@
             </div>
         }
 
-        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
-
         <form asp-controller="Home" asp-action="SignUp" method="post">
-            <div class="mb-3 d-flex align-items-center">
-                <label asp-for="UserName" class="form-label me-3 fw-light" style="width: 120px;">Kullanıcı Adı:</label>
-                <div class="w-100">
-                    <input asp-for="UserName" class="form-control input-custom" required />
-                    <span class="text-danger d-block" asp-validation-for="UserName"></span>
-                </div>
+            <div class="mb-3">
+                <label asp-for="UserName" class="form-label fw-light">Kullanıcı Adı:</label>
+                <input asp-for="UserName" class="form-control input-custom" required />
+                <span class="text-danger d-block mt-1" asp-validation-for="UserName"></span>
             </div>
 
-            <div class="mb-3 d-flex align-items-center">
-                <label asp-for="Email" class="form-label me-3 fw-light" style="width: 120px;">Email:</label>
-                <div class="w-100">
-                    <input asp-for="Email" type="email" class="form-control input-custom" required />
-                    <span class="text-danger d-block" asp-validation-for="Email"></span>
-                </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label fw-light">Email:</label>
+                <input asp-for="Email" type="email" class="form-control input-custom" required />
+                <span class="text-danger d-block mt-1" asp-validation-for="Email"></span>
             </div>
 
-            <div class="mb-3 d-flex align-items-center">
-                <label asp-for="Phone" class="form-label me-3 fw-light" style="width: 120px;">Telefon:</label>
-                <div class="w-100">
-                    <input asp-for="Phone" type="tel" class="form-control input-custom" required />
-                    <span class="text-danger d-block" asp-validation-for="Phone"></span>
-                </div>
+            <div class="mb-3">
+                <label asp-for="Phone" class="form-label fw-light">Telefon:</label>
+                <input asp-for="Phone" type="tel" class="form-control input-custom" required />
+                <span class="text-danger d-block mt-1" asp-validation-for="Phone"></span>
             </div>
 
-            <div class="mb-3 d-flex align-items-center">
-                <label asp-for="Password" class="form-label me-3 fw-light" style="width: 120px;">Şifre:</label>
-                <div class="w-100 input-group">
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label fw-light">Şifre:</label>
+                <div class="input-group">
                     <input asp-for="Password" type="password" class="form-control input-custom" id="password" required />
                     <button type="button" class="toggle-password btn btn-outline-secondary" data-target="password">
                         <i class="bi bi-eye"></i>
                     </button>
                 </div>
-                <span class="text-danger d-block" asp-validation-for="Password"></span>
+                <span class="text-danger d-block mt-1" asp-validation-for="Password"></span>
             </div>
 
-            <div class="mb-3 d-flex align-items-center">
-                <label asp-for="ConfirmPassword" class="form-label me-3 fw-light" style="width: 120px;">Şifre Tekrar:</label>
-                <div class="w-100 input-group">
+            <div class="mb-3">
+                <label asp-for="ConfirmPassword" class="form-label fw-light">Şifre Tekrar:</label>
+                <div class="input-group">
                     <input asp-for="ConfirmPassword" type="password" class="form-control input-custom" id="confirmPassword" required />
                     <button type="button" class="toggle-password btn btn-outline-secondary" data-target="confirmPassword">
                         <i class="bi bi-eye"></i>
                     </button>
                 </div>
-                <span class="text-danger d-block" asp-validation-for="ConfirmPassword"></span>
+                <span class="text-danger d-block mt-1" asp-validation-for="ConfirmPassword"></span>
             </div>
 
             <div class="text-center">
@@ -78,6 +70,16 @@
 }
 
 <style>
+    /* Form kartı */
+    .card {
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+        padding: 30px;
+        border-radius: 12px;
+
+    }
+
     /* Form butonu */
     .custom-btn {
         background-color: #ff4f79;
@@ -87,6 +89,7 @@
         border-radius: 6px;
         border: none;
         transition: 0.3s;
+        width: 50%;
     }
 
     .custom-btn:hover {
@@ -100,9 +103,9 @@
         box-shadow: 0 0 5px #ff4f79 !important;
     }
 
-    /* Kart yukarıda başlasın */
+    /* Kartı ekranın tam ortasına getirme */
     .vh-100 {
-        min-height: 80vh !important;
+        min-height: 100vh !important;
     }
 
     /* Hata mesajlarını alta hizala */
