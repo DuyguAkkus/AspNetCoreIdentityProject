@@ -1,4 +1,5 @@
 using AspNetCoreIdentitiy.web.CustomValidations;
+using AspNetCoreIdentitiy.web.Localizations;
 using AspNetCoreIdentitiy.web.Models;
 
 
@@ -21,6 +22,7 @@ namespace AspNetCoreIdentitiy.web.Extenisons
                 })
                 .AddPasswordValidator<PasswordValidator>()
                 .AddUserValidator<UserValidator>()
+                .AddErrorDescriber<LocalizationsIdentityErrorDescriber>()
                 .AddEntityFrameworkStores<AppDbContext>();
         }
     }
