@@ -70,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Views/Home/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Views/Home/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

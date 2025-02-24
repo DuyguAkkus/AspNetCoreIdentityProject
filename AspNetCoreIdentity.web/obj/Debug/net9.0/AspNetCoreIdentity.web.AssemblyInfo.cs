@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AspNetCoreIdentity.web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c894ee5a6f18ca83efa9d96262ddd3368981c7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b720c68f302ccba6a4c9d581a0d072a0837fb4b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AspNetCoreIdentity.web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AspNetCoreIdentity.web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

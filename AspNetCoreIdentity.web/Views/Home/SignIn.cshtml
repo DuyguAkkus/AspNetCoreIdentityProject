@@ -1,0 +1,119 @@
+@model SignInViewModel
+
+@{
+    ViewBag.Title = "Giriş Yap";
+    Layout = "_Layout";
+}
+
+<div class="d-flex justify-content-center align-items-start vh-100 mt-5">
+    <div class="card shadow-lg p-4" style="width: 450px; border-radius: 12px;">
+        <h2 class="fw-light text-center mb-4">Giriş Yap</h2>
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["ErrorMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form asp-controller="Home" asp-action="SignIn" method="post">
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label fw-light">Email:</label>
+                <input asp-for="Email" type="email" class="form-control input-custom" required />
+                <span class="text-danger d-block" asp-validation-for="Email"></span>
+            </div>
+
+            <div class="mb-3 position-relative">
+                <label asp-for="Password" class="form-label fw-light">Şifre:</label>
+                <div class="input-group">
+                    <input asp-for="Password" type="password" class="form-control input-custom" id="password" required />
+                    <button type="button" class="toggle-password btn btn-outline-secondary" data-target="password">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <span class="text-danger d-block" asp-validation-for="Password"></span>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label fw-light" for="rememberMe">Beni Hatırla</label>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn custom-btn">Giriş Yap</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<style>
+    /* Form butonu */
+    .custom-btn {
+        background-color: #ff4f79;
+        color: white;
+        font-size: 16px;
+        padding: 8px 30px;
+        border-radius: 6px;
+        border: none;
+        transition: 0.3s;
+    }
+
+    .custom-btn:hover {
+        background-color: #ff3b65;
+        transform: scale(1.05);
+    }
+
+    /* Input focus efekti */
+    .input-custom:focus {
+        border-color: #ff4f79 !important;
+        box-shadow: 0 0 5px #ff4f79 !important;
+    }
+
+    /* Kart yukarıda başlasın */
+    .vh-100 {
+        min-height: 80vh !important;
+    }
+
+    /* Hata mesajlarını alta hizala */
+    .text-danger {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    /* Şifre gizle/göster butonu - input ile hizalandı */
+    .toggle-password {
+        background-color: #ff4f79;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 40px;
+        height: 38px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".toggle-password").forEach(button => {
+            button.addEventListener("click", function () {
+                var input = document.getElementById(this.dataset.target);
+                var icon = this.querySelector("i");
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.classList.remove("bi-eye");
+                    icon.classList.add("bi-eye-slash");
+                } else {
+                    input.type = "password";
+                    icon.classList.remove("bi-eye-slash");
+                    icon.classList.add("bi-eye");
+                }
+            });
+        });
+    });
+</script>
