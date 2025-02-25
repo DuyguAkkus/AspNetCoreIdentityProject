@@ -21,17 +21,14 @@ namespace AspNetCoreIdentitiy.web.Controllers
         }
 
         public IActionResult Index() => View();
-
         public IActionResult Privacy() => View();
-
         public IActionResult SignUp() => View();
-
         public IActionResult SignIn() => View();
-        
+
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInViewModel model, string? returnUrl = null)
         {
-            returnUrl ??= Url.Action("Index", "Home");
+            returnUrl ??= Url.Action("Index", "Home"); // Eğer `returnUrl` boşsa, `/Member/Index`'e yönlendir
 
             if (!ModelState.IsValid)
             {
@@ -50,47 +47,17 @@ namespace AspNetCoreIdentitiy.web.Controllers
 
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Home"); // ✅ Giriş başarılıysa Home/Index sayfasına yönlendir
+                return Redirect(returnUrl); // ✅ Giriş başarılıysa `/Member/Index`'e yönlendirilir
             }
 
             if (result.IsLockedOut)
             {
-                ModelState.AddModelError(string.Empty, "3 dakika sonra tekrar deneyiniz");
+                ModelState.AddModelError(string.Empty, "3 dakika sonra tekrar deneyiniz.");
                 return View(model);
-                
             }
+
             ModelState.AddModelError(string.Empty, "Email veya şifre yanlış.");
             return View(model);
-        }
-
-
-        [HttpPost]
-        public async Task<IActionResult> SignUp(SignUpViewModel request)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(request);
-            }
-
-            var newUser = new AppUser
-            {
-                UserName = request.UserName,
-                PhoneNumber = request.Phone,
-                Email = request.Email
-            };
-
-            var identityResult = await _userManager.CreateAsync(newUser, request.Password);
-
-            if (identityResult.Succeeded)
-            {
-                TempData["SuccessMessage"] = "Kayıt başarıyla gerçekleşti!";
-                return RedirectToAction("SignIn");
-            }
-
-            // ✅ **ModelStateExtensions Kullanımı**
-            ModelState.AddModelErrorList(identityResult.Errors.Select(e => e.Description).ToList());
-
-            return View(request);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

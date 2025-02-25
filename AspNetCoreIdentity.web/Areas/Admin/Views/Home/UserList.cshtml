@@ -1,4 +1,4 @@
-@model List<AspNetCoreIdentitiy.web.Areas.Admin.Models.UserViewModel>
+@model List<AdminModel.UserViewModel>
 
 @{
     ViewBag.Title = "Kullanıcı Listesi";
@@ -16,7 +16,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model)
+    @foreach (var item  in Model)
     {
         <tr>
             <td>@item.Id</td>

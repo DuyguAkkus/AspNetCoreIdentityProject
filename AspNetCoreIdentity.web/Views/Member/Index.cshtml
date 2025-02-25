@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Kullanıcı Bilgileri";
+}
+
+<h2>Hoşgeldin, @(User.Identity?.IsAuthenticated == true ? User.Identity.Name : "Ziyaretçi")!</h2>
+
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <table class="table table-bordered table-striped mt-3">
+        <thead class="table-dark">
+        <tr>
+            <th>Bilgi</th>
+            <th>Değer</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>Kullanıcı Adı:</strong></td>
+            <td>@Model.UserName</td>
+        </tr>
+        <tr>
+            <td><strong>Email:</strong></td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td><strong>Telefon:</strong></td>
+            <td>@Model.PhoneNumber</td>
+        </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-warning mt-3">
+        <strong>Giriş yapmadınız.</strong> Kullanıcı bilgilerini görmek için lütfen giriş yapın.
+    </div>
+}

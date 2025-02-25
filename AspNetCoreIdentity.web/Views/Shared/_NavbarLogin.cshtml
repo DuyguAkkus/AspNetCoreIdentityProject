@@ -20,7 +20,6 @@
         color: white !important;
     }
 </style>
-
 @if (User.Identity != null && User.Identity.IsAuthenticated)
 {
     <!-- Kullanıcı giriş yapmışsa dropdown menü göster -->
@@ -31,7 +30,12 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                    <a asp-route-returnurl="/Home/Index"  asp-controller="Member" asp-action="Logout"   class="dropdown-item logout-btn btn btn-danger">
+                    <a asp-controller="Member" asp-action="Index" class="dropdown-item">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a asp-route-returnurl="/Home/Index" asp-controller="Member" asp-action="Logout" class="dropdown-item">
                         Çıkış Yap
                     </a>
                 </li>
