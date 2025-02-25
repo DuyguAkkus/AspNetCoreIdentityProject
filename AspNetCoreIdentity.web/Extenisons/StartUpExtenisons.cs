@@ -19,6 +19,9 @@ namespace AspNetCoreIdentitiy.web.Extenisons
                     options.Password.RequireUppercase = true;
                     options.Password.RequireLowercase = false;
                     options.Password.RequireDigit = false;
+                    
+                    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+                    options.Lockout.MaxFailedAccessAttempts = 3;
                 })
                 .AddPasswordValidator<PasswordValidator>()
                 .AddUserValidator<UserValidator>()

@@ -9,11 +9,26 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// **📌 Identity Servislerini Konfigüre Et**
 builder.Services.AddIdentityWithExt(); // **Özel Identity yapılandırmasını ekledik**
 
 // **📌 MVC İçin Servisleri Ekleyelim**
 builder.Services.AddControllersWithViews(); // MVC kullanımı için gerekli servisler
+
+
+
+builder.Services.ConfigureApplicationCookie(opt =>
+    {
+        var cookieBuilder = new CookieBuilder();
+        cookieBuilder.Name = "duygucookie";
+        opt.LoginPath = new PathString("/Home/SignIn");
+        opt.LogoutPath = new PathString("/member/logout");
+        opt.Cookie = cookieBuilder;
+        opt.ExpireTimeSpan = TimeSpan.FromDays(15);
+        opt.SlidingExpiration = true;
+    }
+);
+
+
 var app = builder.Build();
 
 // **📌 Veritabanı Bağlantısını Test Et**

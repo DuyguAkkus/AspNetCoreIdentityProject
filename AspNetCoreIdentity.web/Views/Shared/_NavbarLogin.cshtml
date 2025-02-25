@@ -1,0 +1,47 @@
+<style>
+    /* Kullanıcı adı (dropdown açma butonu) için renk ayarı */
+    .user-dropdown {
+        color: #ff3b65 !important; /* Kullanıcı adı rengini değiştir */
+        font-weight: bold; /* Kalın font */
+    }
+
+    /* Dropdown'da Çıkış Yap butonunun arka plan ve yazı rengi */
+    .logout-btn {
+        color: white !important; /* Yazı rengini beyaz yap */
+        background-color: #ff3b65 !important; /* Arka plan rengini ayarla */
+        border: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Çıkış Yap butonu üzerine gelindiğinde renk değişimi */
+    .logout-btn:hover {
+        background-color: #d13250 !important; /* Daha koyu kırmızı tonu */
+        color: white !important;
+    }
+</style>
+
+@if (User.Identity != null && User.Identity.IsAuthenticated)
+{
+    <!-- Kullanıcı giriş yapmışsa dropdown menü göster -->
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle user-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                @User.Identity.Name
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a asp-route-returnurl="/Home/Index"  asp-controller="Member" asp-action="Logout"   class="dropdown-item logout-btn btn btn-danger">
+                        Çıkış Yap
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+}
+else
+{
+    <!-- Kullanıcı giriş yapmamışsa "Giriş Yap" ve "Kayıt Ol" butonları göster -->
+    <a class="btn btn-primary ms-2" asp-controller="Home" asp-action="SignUp" style="background-color: #ff3b65; border-color: azure">Kayıt Ol</a>
+    <a class="btn btn-primary ms-2" asp-controller="Home" asp-action="SignIn" style="background-color: #ff3b65; border-color: azure">Giriş Yap</a>
+}

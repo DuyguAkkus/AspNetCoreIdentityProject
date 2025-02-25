@@ -46,13 +46,19 @@ namespace AspNetCoreIdentitiy.web.Controllers
                 return View(model);
             }
 
-            var result = await _signInManager.PasswordSignInAsync(hasUser, model.Password, model.RememberMe, false);
+            var result = await _signInManager.PasswordSignInAsync(hasUser, model.Password, model.RememberMe, true);
 
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Home"); // ✅ Giriş başarılıysa Home/Index sayfasına yönlendir
             }
 
+            if (result.IsLockedOut)
+            {
+                ModelState.AddModelError(string.Empty, "3 dakika sonra tekrar deneyiniz");
+                return View(model);
+                
+            }
             ModelState.AddModelError(string.Empty, "Email veya şifre yanlış.");
             return View(model);
         }
