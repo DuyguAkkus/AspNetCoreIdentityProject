@@ -23,7 +23,36 @@ namespace AspNetCoreIdentitiy.web.Controllers
         public IActionResult Index() => View();
         public IActionResult Privacy() => View();
         public IActionResult SignUp() => View();
+        
         public IActionResult SignIn() => View();
+
+        [HttpPost]
+        public async Task<IActionResult> SignUp(SignUpViewModel request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            var identityResult = await _userManager.CreateAsync(
+                new() { UserName = request.UserName, PhoneNumber = request.Phone, Email = request.Email },
+                request.ConfirmPassword);
+
+
+            if (!identityResult.Succeeded)
+            {
+                ModelState.AddModelErrorList(identityResult.Errors.Select(x => x.Description).ToList());
+                return View();
+            }
+
+
+
+            TempData["SuccessMessage"] = "Üyelik kayıt işlemi başarıla gerçekleşmiştir.";
+
+            return RedirectToAction(nameof(HomeController.SignUp));
+        }
+
+
 
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInViewModel model, string? returnUrl = null)
