@@ -30,6 +30,6 @@ namespace AspNetCoreIdentitiy.web.ViewModels
         public IFormFile? ProfilePicture { get; set; } // ✅ `Picture` yerine daha anlamlı olması için `ProfilePicture` ismini verdim.
 
         [Display(Name = "Cinsiyet :")]
-        public byte? Gender { get; set; }
+        public Gender? Gender { get; set; }
     }
 }
