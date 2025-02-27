@@ -36,7 +36,8 @@ namespace AspNetCoreIdentitiy.web.Controllers
 
             var identityResult = await _userManager.CreateAsync(
                 new() { UserName = request.UserName, PhoneNumber = request.Phone, Email = request.Email },
-                request.ConfirmPassword);
+                request.ConfirmPassword
+            );
 
 
             if (!identityResult.Succeeded)
