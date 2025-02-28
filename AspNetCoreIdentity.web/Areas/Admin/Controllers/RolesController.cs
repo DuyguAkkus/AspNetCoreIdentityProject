@@ -21,7 +21,12 @@ namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
         {
             return View();
         }
-
+        public IActionResult RoleCreate() // get metodumuz=> View();
+        {
+            return View();
+        }
+        
+        [HttpPost]
         public IActionResult RoleCreate(RoleCreateViewModel request)
         {
             return View();

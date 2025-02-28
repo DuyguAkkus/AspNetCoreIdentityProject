@@ -10,21 +10,24 @@
     <link rel="stylesheet" href="~/AspNetCoreIdentity.web.styles.css" asp-append-version="true"/>
 
     <style>
-        /* Navbar'ı pembe yapmak için özel CSS */
+        /* 🌸 Navbar'ı beyaz yap */
         .custom-navbar {
-            background-color: #fa8da0 !important; /* Pembe tonu */
+            background-color: white !important; /* Beyaz arka plan */
+            border-bottom: 2px solid #ff4f79; /* İnce pembe çizgi */
         }
 
-        /* Navbar içindeki metinlerin görünürlüğünü artır */
+        /* Navbar içindeki metinleri pembe yap */
         .custom-navbar .navbar-brand,
-        .custom-navbar .nav-link {
-            color: white !important; /* Beyaz yazı */
-            font-weight: 500;
+        .custom-navbar .nav-link,
+        .custom-navbar .dropdown-toggle {
+            color: #ff4f79 !important; /* Pembe yazı */
+            font-weight: bold;
         }
 
         /* Linklerin hover efekti */
-        .custom-navbar .nav-link:hover {
-            color: #ffd1dc !important; /* Daha açık bir pembe tonu */
+        .custom-navbar .nav-link:hover,
+        .custom-navbar .dropdown-toggle:hover {
+            color: #e6004c !important; /* Daha koyu pembe */
         }
 
         /* Navbar içindeki butonlar ve linkler arasındaki boşluğu artır */
@@ -34,6 +37,21 @@
 
         .custom-navbar .nav-link {
             padding: 12px 18px; /* Linklere dolgu (padding) ekler */
+        }
+
+        /* 🌟 Dropdown Menüsünü Şıklaştır */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            color: #ff4f79 !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ffe6eb !important; /* Hafif açık pembe */
+            color: #e6004c !important; /* Koyu pembe */
         }
     </style>
 </head>
@@ -67,7 +85,6 @@
                             </li>
                         </ul>
                     </li>
-
                 </ul>
             </div>
         </div>

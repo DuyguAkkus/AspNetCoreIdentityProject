@@ -1,0 +1,79 @@
+@model AdminModel.RoleCreateViewModel
+
+@{
+    ViewData["Title"] = "RoleCreate";
+    Layout = "_Layout"; // Layout belirleme
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-lg p-4 border-0 rounded">
+            <h2 class="text-center text-dark">Role Oluştur</h2>
+            <hr class="mb-4">
+
+            <form asp-action="RoleCreate" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="RoleName" class="form-label fw-bold text-dark">Rol Adı</label>
+                    <input asp-for="RoleName" class="form-control border-2 rounded custom-input" placeholder="Rol ismi girin"/>
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group text-center">
+                    <input type="submit" value="Oluştur" class="btn custom-btn-pink px-4 py-2 fw-bold" />
+                </div>
+            </form>
+
+            <div class="text-center mt-3">
+                <a asp-action="Index" class="btn custom-btn-secondary px-4 py-2">Role listesine geri dön</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<style>
+    
+    .custom-btn-pink {
+        background-color: #fa8da0 !important;
+        border: none;
+        color: white !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .custom-btn-pink:hover {
+        background-color: #f57288 !important; /* Koyu pembe */
+        color: white !important;
+    }
+
+    
+    .custom-btn-secondary {
+        background-color: #ffd1dc !important; /* Açık pembe */
+        border: none;
+        color: black !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .custom-btn-secondary:hover {
+        background-color: #ffbacb !important; /* Biraz daha koyu pembe */
+        color: black !important;
+    }
+
+
+    .custom-input:focus {
+        border-color: #fa8da0 !important; /* Kenarlık pembeye dönsün */
+        box-shadow: 0 0 10px rgba(250, 141, 160, 0.5) !important; /* Pembe glow efekti */
+        outline: none !important;
+    }
+
+    
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
