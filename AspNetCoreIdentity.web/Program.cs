@@ -2,19 +2,20 @@ using Microsoft.EntityFrameworkCore;
 using AspNetCoreIdentitiy.web.Models; // AppDbContext için gerekli namespace
 using AspNetCoreIdentitiy.web.Extenisons; // **Identity uzantılarını ekleme**
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// **📌 SQL Server Bağlantısını Ekle**
+// SQL Server Bağlantısını Ekle
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddIdentityWithExt(); // **Özel Identity yapılandırmasını ekledik**
 
-// **📌 MVC İçin Servisleri Ekleyelim**
+
 builder.Services.AddControllersWithViews(); // MVC kullanımı için gerekli servisler
 
-
+builder.Services.AddSingleton<IFileProvider>(new PhysicalFileProvider(Directory.GetCurrentDirectory()));
 
 builder.Services.ConfigureApplicationCookie(opt =>
     {
@@ -31,54 +32,52 @@ builder.Services.ConfigureApplicationCookie(opt =>
 
 var app = builder.Build();
 
-// **📌 Veritabanı Bağlantısını Test Et**
+//  Veritabanı Bağlantısını Test Et**
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     try
     {
-        Console.WriteLine("🔄 Veritabanına bağlanmaya çalışılıyor...");
+        Console.WriteLine("Veritabanına bağlanmaya çalışılıyor...");
 
-        if (dbContext.Database.CanConnect()) // Veritabanına bağlanabiliyor mu kontrol et
+        if (dbContext.Database.CanConnect()) 
         {
-            Console.WriteLine("✅ Veritabanı bağlantısı başarılı!");
+            Console.WriteLine("Veritabanı bağlantısı başarılı!");
         }
         else
         {
-            Console.WriteLine("❌ Veritabanına bağlanılamadı!");
+            Console.WriteLine("Veritabanına bağlanılamadı!");
         }
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"❌ Veritabanı bağlantı hatası: {ex.Message}");
+        Console.WriteLine($"Veritabanı bağlantı hatası: {ex.Message}");
     }
 }
 
-// **📌 Hata Yönetimi ve Güvenlik Ayarları**
-if (!app.Environment.IsDevelopment()) // Eğer uygulama production ortamındaysa hata yönetimini ayarla
+//  Hata Yönetimi ve Güvenlik Ayarları**
+if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error"); // Hata sayfasına yönlendirme
+    app.UseExceptionHandler("/Home/Error"); 
     app.UseHsts(); // HSTS güvenlik önlemini uygula
 }
 
-// **📌 Middleware Konfigürasyonu**
+//  Middleware Konfigürasyonu**
 app.UseHttpsRedirection(); // HTTP isteklerini HTTPS'e yönlendir
 app.UseStaticFiles(); // **Statik dosyaları (CSS, JS, resimler) etkinleştir**
 app.UseRouting(); // MVC yönlendirme mekanizmasını etkinleştir
 app.UseAuthentication(); // **Kimlik doğrulamayı etkinleştir**
 app.UseAuthorization(); // Yetkilendirme mekanizmasını etkinleştir
 
-// **📌 Alan Destekli Rota Tanımlama**
+
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
 ).WithMetadata(new { Description = "Alan bazlı yönlendirme aktif!" });
 
-// **📌 Varsayılan Rota Tanımı**
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
 
-// **📌 Uygulamayı Çalıştır**
 app.Run();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wdf33zkYlKZflavJtiDcNPuiAgtiGjQfUnFBzzvmRbc=",
+  "Hash": "aZ8dHgwzpKRe7tb3BFeJrg5agdhYPeTOPVxKMAHzQdU=",
   "Source": "AspNetCoreIdentity.web",
   "BasePath": "_content/AspNetCoreIdentity.web",
   "Mode": "Default",
@@ -2724,6 +2724,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png",
+      "SourceId": "AspNetCoreIdentity.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/",
+      "BasePath": "_content/AspNetCoreIdentity.web",
+      "RelativePath": "userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1x4lb5j1h9",
+      "Integrity": "22RgiwNBsd+XdSQ6+DMAoGG3AJG8eEI027BYPU0ps7c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png"
+    },
+    {
+      "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/default_user.jpg",
+      "SourceId": "AspNetCoreIdentity.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/",
+      "BasePath": "_content/AspNetCoreIdentity.web",
+      "RelativePath": "userPictures/default_user#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qgrwppsh08",
+      "Integrity": "9u/1DKpgPxOvl56d2DN0Erj975W+hc8aX3EOlLf8e6s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/userPictures/default_user.jpg"
     }
   ],
   "Endpoints": [
@@ -21878,6 +21920,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-fSIPwem7dkw/la3vh7zXsbgkmPg4WSIn3zJ+MvKWKVE="
+        }
+      ]
+    },
+    {
+      "Route": "userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.1x4lb5j1h9.png",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "748001"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"22RgiwNBsd+XdSQ6+DMAoGG3AJG8eEI027BYPU0ps7c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:33:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1x4lb5j1h9"
+        },
+        {
+          "Name": "label",
+          "Value": "userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-22RgiwNBsd+XdSQ6+DMAoGG3AJG8eEI027BYPU0ps7c="
+        }
+      ]
+    },
+    {
+      "Route": "userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "748001"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"22RgiwNBsd+XdSQ6+DMAoGG3AJG8eEI027BYPU0ps7c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:33:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-22RgiwNBsd+XdSQ6+DMAoGG3AJG8eEI027BYPU0ps7c="
+        }
+      ]
+    },
+    {
+      "Route": "userPictures/default_user.jpg",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/default_user.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9u/1DKpgPxOvl56d2DN0Erj975W+hc8aX3EOlLf8e6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:54:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9u/1DKpgPxOvl56d2DN0Erj975W+hc8aX3EOlLf8e6s="
+        }
+      ]
+    },
+    {
+      "Route": "userPictures/default_user.qgrwppsh08.jpg",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/default_user.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9u/1DKpgPxOvl56d2DN0Erj975W+hc8aX3EOlLf8e6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:54:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qgrwppsh08"
+        },
+        {
+          "Name": "label",
+          "Value": "userPictures/default_user.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9u/1DKpgPxOvl56d2DN0Erj975W+hc8aX3EOlLf8e6s="
         }
       ]
     }
