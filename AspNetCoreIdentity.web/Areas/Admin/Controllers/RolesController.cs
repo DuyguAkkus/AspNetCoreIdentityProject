@@ -4,6 +4,9 @@ using AspNetCoreIdentitiy.web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
 {
@@ -20,9 +23,16 @@ namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
             _roleManager = roleManager;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var roles = _roleManager.Roles.ToList(); // Tüm rolleri listeye al
+            var roles = await _roleManager.Roles
+                .Select(x => new RoleViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name!
+                })
+                .ToListAsync();
+
             return View(roles);
         }
 

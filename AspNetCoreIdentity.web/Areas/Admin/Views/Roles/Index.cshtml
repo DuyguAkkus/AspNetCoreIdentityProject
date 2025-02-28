@@ -1,29 +1,92 @@
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Roller";
     Layout = "_Layout";
 }
+@model List<AdminModel.RoleViewModel>
 
-<h2>Roller</h2>
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="fw-bold">Mevcut Roller</h2>
+        <a class="btn custom-btn-pink" asp-controller="Roles" asp-action="RoleCreate" asp-area="Admin">Rol Ekle</a>
+    </div>
 
-<div class="row">
-    <div class="col-md-2">
-        <a class="btn custom-btn-pink" asp-controller="Roles" asp-action="RoleCreate" asp-area="Admin">Role Ekle</a>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-info mt-3" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="table-responsive mt-3">
+        <table class="table table-hover text-center shadow-sm">
+            <thead class="table-light">
+            <tr>
+                <th>#</th>
+                <th>ROL İSMİ</th>
+                <th>İŞLEMLER</th>
+            </tr>
+            </thead>
+            <tbody>
+            @for (var i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <th scope="row">@(@i + 1)</th>
+                    <td>@Model[i].Name</td>
+                    <td>
+                        <a class="btn btn-outline-dark btn-sm me-2" asp-area="Admin" asp-controller="Roles" asp-action="RoleUpdate" asp-route-id="@Model[i].Id">Güncelle</a>
+                        <a class="btn btn-outline-danger btn-sm" asp-area="Admin" asp-controller="Roles" asp-action="RoleDelete" asp-route-id="@Model[i].Id">Sil</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
     </div>
 </div>
 
 <style>
+    /* 🌸 Pembe Buton Stili */
     .custom-btn-pink {
-        background-color: #fa8da0 !important;
+        background-color: #d13250 !important;
         border: none;
         color: white !important;
-        padding: 10px 20px;
+        padding: 12px 18px;
         font-weight: bold;
         transition: all 0.3s ease-in-out;
-        border-radius: 5px;
+        border-radius: 8px;
     }
 
     .custom-btn-pink:hover {
         background-color: #f57288 !important; /* Koyu pembe */
         color: white !important;
+    }
+
+    /* 🌟 Tablo Başlıklarını Şık Hale Getirme */
+    .table thead th {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    /* 🌟 Tablo Hover Efekti */
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa !important;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* 🌟 Butonları Daha Estetik Yapma */
+    .btn-outline-dark {
+        border-radius: 5px;
+        padding: 6px 12px;
+    }
+
+    .btn-outline-danger {
+        border-radius: 5px;
+        padding: 6px 12px;
+    }
+
+    /* 🌟 Tabloyu Gölgelendirme */
+    .table {
+        border-radius: 8px;
+        overflow: hidden;
     }
 </style>

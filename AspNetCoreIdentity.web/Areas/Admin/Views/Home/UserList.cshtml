@@ -5,24 +5,28 @@
     Layout = "_Layout";
 }
 
-<h2>@ViewBag.Title</h2> <!-- ViewBag başlığını dinamik olarak kullan -->
+<h2 class="text-center mt-4">@ViewBag.Title</h2> <!-- Başlığı ortaladık -->
 
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Kullanıcı Adı</th>
-        <th>Email</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var item  in Model)
-    {
+<div class="container mt-4">
+    <table class="table">
+        <thead class="table-light">
         <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td> <!-- "Name" yerine "UserName" düzeltilmeli -->
-            <td>@item.Email</td>
+            <th scope="col">#</th>
+            <th scope="col">Kullanıcı Id</th>
+            <th scope="col">Kullanıcı Adı</th>
+            <th scope="col">Email</th>
         </tr>
-    }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        @foreach (var (item, index) in Model.Select((value, i) => (value, i + 1)))
+        {
+            <tr>
+                <th scope="row" class="fw-bold">@index</th> <!-- Otomatik artan sıra numarası -->
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
