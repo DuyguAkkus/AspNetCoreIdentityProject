@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aZ8dHgwzpKRe7tb3BFeJrg5agdhYPeTOPVxKMAHzQdU=",
+  "Hash": "KQgQgRmVvZ3SxUNzIj0xcJRMcx7XKymytM6DbY7d9N0=",
   "Source": "AspNetCoreIdentity.web",
   "BasePath": "_content/AspNetCoreIdentity.web",
   "Mode": "Default",
@@ -2724,6 +2724,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg",
+      "SourceId": "AspNetCoreIdentity.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/",
+      "BasePath": "_content/AspNetCoreIdentity.web",
+      "RelativePath": "userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5gulotjv4p",
+      "Integrity": "m9YU6b3SDOOYn/LbDyKIVt6k2Ihtd3+grYkOrMjVI9I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg"
     },
     {
       "Identity": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png",
@@ -21920,6 +21941,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-fSIPwem7dkw/la3vh7zXsbgkmPg4WSIn3zJ+MvKWKVE="
+        }
+      ]
+    },
+    {
+      "Route": "userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.5gulotjv4p.jpg",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "258749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m9YU6b3SDOOYn/LbDyKIVt6k2Ihtd3+grYkOrMjVI9I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 00:12:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5gulotjv4p"
+        },
+        {
+          "Name": "label",
+          "Value": "userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m9YU6b3SDOOYn/LbDyKIVt6k2Ihtd3+grYkOrMjVI9I="
+        }
+      ]
+    },
+    {
+      "Route": "userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg",
+      "AssetFile": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "258749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m9YU6b3SDOOYn/LbDyKIVt6k2Ihtd3+grYkOrMjVI9I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 00:12:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m9YU6b3SDOOYn/LbDyKIVt6k2Ihtd3+grYkOrMjVI9I="
         }
       ]
     },

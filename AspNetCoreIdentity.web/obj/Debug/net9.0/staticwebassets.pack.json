@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
     },
     {
+      "Id": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg",
+      "PackagePath": "staticwebassets/userPictures/7b12378b-685e-4aaf-94e6-6b7b14f76a80.jpg"
+    },
+    {
       "Id": "/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/wwwroot/userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png",
       "PackagePath": "staticwebassets/userPictures/c26728a4-c1d7-4d72-854c-27dd6802b489.png"
     },
