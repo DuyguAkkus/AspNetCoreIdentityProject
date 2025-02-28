@@ -26,6 +26,15 @@
         .custom-navbar .nav-link:hover {
             color: #ffd1dc !important; /* Daha açık bir pembe tonu */
         }
+
+        /* Navbar içindeki butonlar ve linkler arasındaki boşluğu artır */
+        .custom-navbar .nav-item {
+            margin-right: 20px; /* Sağdan boşluk ekler */
+        }
+
+        .custom-navbar .nav-link {
+            padding: 12px 18px; /* Linklere dolgu (padding) ekler */
+        }
     </style>
 </head>
 <body>
@@ -48,7 +57,17 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-area="Admin" asp-controller="Home" asp-action="UserList">Üye Listesi</a>
                     </li>
-                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Roller
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" asp-area="Admin" asp-controller="Roles" asp-action="Index">Tüm Roller</a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -66,9 +85,13 @@
         &copy; 2025 - AspNetCoreIdentity.web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
 </footer>
+
+<!-- Bootstrap ve jQuery Dosyaları -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+
 @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
