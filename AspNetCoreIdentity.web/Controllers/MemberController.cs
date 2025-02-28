@@ -42,7 +42,9 @@ namespace AspNetCoreIdentitiy.Web.Controllers
                 Email = currentUser.Email ?? "Email bulunamadı",
                 PhoneNumber = currentUser.PhoneNumber ?? "Telefon bilgisi yok",
                 UserName = currentUser.UserName ?? "Kullanıcı adı bulunamadı",
-                PictureUrl = string.IsNullOrEmpty(currentUser.Picture) ? "/userPictures/default_user.jpg" : currentUser.Picture
+                PictureUrl = string.IsNullOrEmpty(currentUser.Picture) 
+                    ? "/userPictures/default_user.jpg" 
+                    : $"/userPictures/{currentUser.Picture}" // ✅ Dosya adı kaydedildiği için yolu birleştiriyoruz.
             };
 
             return View(userViewModel);
@@ -101,25 +103,31 @@ namespace AspNetCoreIdentitiy.Web.Controllers
                     return BadRequest("Profil resmi kaydedilecek dizin bulunamadı.");
                 }
 
-                // Önceki resmi silme
-                if (!string.IsNullOrEmpty(currentUser.Picture))
+                // ✅ Önceki resmi silme (Ancak `default_user.jpg` ise silme!)
+                if (!string.IsNullOrEmpty(currentUser.Picture) && currentUser.Picture != "default_user.jpg")
                 {
-                    var oldPicturePath = Path.Combine(wwwRootPath, Path.GetFileName(currentUser.Picture));
+                    var oldPicturePath = Path.Combine(wwwRootPath, currentUser.Picture);
                     if (System.IO.File.Exists(oldPicturePath))
                     {
                         System.IO.File.Delete(oldPicturePath);
                     }
                 }
 
-                var randomFileName = $"{Guid.NewGuid()}{Path.GetExtension(request.ProfilePicture.FileName)}";
-                var newPicturePath = Path.Combine(wwwRootPath, randomFileName);
+                // ✅ Benzersiz dosya adı oluştur
+                var uniqueFileName = $"{Guid.NewGuid().ToString("N")}_{DateTime.Now.Ticks}{Path.GetExtension(request.ProfilePicture.FileName)}";
+                var newPicturePath = Path.Combine(wwwRootPath, uniqueFileName);
 
                 using (var stream = new FileStream(newPicturePath, FileMode.Create))
                 {
                     await request.ProfilePicture.CopyToAsync(stream);
                 }
 
-                currentUser.Picture = $"/userPictures/{randomFileName}";
+                currentUser.Picture = uniqueFileName; // ✅ Artık sadece dosya adı kaydedilecek
+            }
+            else
+            {
+                // ✅ Eğer yeni resim yüklenmezse ve mevcut resim NULL ise varsayılan resmi ata
+                currentUser.Picture ??= "default_user.jpg"; // ✅ Sadece dosya adı kaydediliyor.
             }
 
             var updateToUserResult = await _userManager.UpdateAsync(currentUser);
