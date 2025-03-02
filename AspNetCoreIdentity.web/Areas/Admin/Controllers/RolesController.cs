@@ -11,7 +11,7 @@ using System.Linq;
 namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin")] // Yalnızca Admin rolüne sahip kullanıcılar erişebilir
+    [Authorize(Roles = "Admin")] // Yalnızca Admin rolüne sahip kullanıcılar erişebilir
     public class RolesController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -35,12 +35,12 @@ namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
 
             return View(roles);
         }
-
+   
         public IActionResult RoleCreate() // GET metodu
         {
             return View();
         }
-        
+ 
         [HttpPost]
         public async Task<IActionResult> RoleCreate(RoleCreateViewModel request)
         {
@@ -125,6 +125,7 @@ namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
             TempData["SuccessMessage"] = "Rol başarıyla güncellendi.";
             return RedirectToAction("Index");
         }
+
         public async Task<IActionResult> RoleDelete(string id)
         {
             var roleToDelete = await _roleManager.FindByIdAsync(id);
@@ -146,7 +147,7 @@ namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
             
         }
 
-     
+ 
         public async Task<IActionResult> AssignRoleToUser(string id)
         {
             var currentUser = (await _userManager.FindByIdAsync(id))!;
@@ -174,7 +175,7 @@ namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers
             
         }
 
-
+    
         [HttpPost]
         public async Task<IActionResult> AssignRoleToUser(string userId, List<AssignRoleToUserViewModel> requestList)
         {

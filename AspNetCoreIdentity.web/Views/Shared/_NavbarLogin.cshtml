@@ -1,3 +1,4 @@
+@using System.Security.Claims
 <style>
     /* Kullanıcı adı (dropdown açma butonu) için renk ayarı */
     .user-dropdown {
@@ -39,8 +40,20 @@
                         Kullanıcı Güncelle
                     </a>
                 </li>
+                @if (User.HasClaim(x => x.Type == ClaimTypes.Role  && x.Value == "Admin"))
+                {
+                    <a  asp-area="Admin"  asp-controller="Home" asp-action="Index" class="dropdown-item">
+                        Admin 
+                    </a>
+                }
+                @if (User.HasClaim(x => x.Type == ClaimTypes.Role  && x.Value == "Admin"))
+                {
+                    <a   asp-controller="Member" asp-action="Claims" class="dropdown-item">
+                        Claims
+                    </a>
+                }
                 <li>
-                    <a asp-route-returnurl="/Home/Index" asp-controller="Member" asp-action="Logout" class="dropdown-item">
+                    <a  asp-controller="Member" asp-action="Logout" class="dropdown-item">
                         Çıkış Yap
                     </a>
                 </li>

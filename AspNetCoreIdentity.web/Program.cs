@@ -1,6 +1,8 @@
+using AspNetCoreIdentitiy.web.ClaimsProvider;
 using Microsoft.EntityFrameworkCore;
 using AspNetCoreIdentitiy.web.Models; // AppDbContext için gerekli namespace
-using AspNetCoreIdentitiy.web.Extenisons; // **Identity uzantılarını ekleme**
+using AspNetCoreIdentitiy.web.Extenisons;
+using Microsoft.AspNetCore.Authentication; // **Identity uzantılarını ekleme**
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.FileProviders;
 
@@ -12,8 +14,17 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddIdentityWithExt(); // **Özel Identity yapılandırmasını ekledik**
 
+builder.Services.AddScoped<IClaimsTransformation, UserClaimProvider>();
 
 builder.Services.AddControllersWithViews(); // MVC kullanımı için gerekli servisler
+
+builder.Services.AddAuthorization(option =>
+{
+    option.AddPolicy("AnkaraPolicy", policy => policy.RequireClaim("city", "Ankara", "manisa"));
+});
+
+//bir policy içinde birden fazla kueral olabilir,
+//şehri ankara olanların erişebileceği bir policy tanımlamış olduk.
 
 builder.Services.AddSingleton<IFileProvider>(new PhysicalFileProvider(Directory.GetCurrentDirectory()));
 
@@ -26,6 +37,7 @@ builder.Services.ConfigureApplicationCookie(opt =>
         opt.Cookie = cookieBuilder;
         opt.ExpireTimeSpan = TimeSpan.FromDays(15);
         opt.SlidingExpiration = true;
+        opt.AccessDeniedPath = new PathString("/Member/AccessDenied");
     }
 );
 

@@ -1,5 +1,6 @@
 using AspNetCoreIdentitiy.web.Areas.Admin.Models;
 using AspNetCoreIdentitiy.web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pag
 
 namespace AspNetCoreIdentitiy.web.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize(Roles = "Admin")] 
 public class HomeController : Controller
 {
     private readonly UserManager<AppUser>_UserManager;

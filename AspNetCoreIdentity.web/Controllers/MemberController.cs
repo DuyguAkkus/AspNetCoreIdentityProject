@@ -150,5 +150,43 @@ namespace AspNetCoreIdentitiy.Web.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home"); 
         }
+        
+
+        [HttpGet]
+        public IActionResult Claims()
+        {
+            var userClaimsList = User.Claims.Select(x => new ClaimViewModel
+            {
+                Issuer = x.Issuer,
+                ClaimType = x.Type,
+                ClaimValue = x.Value
+            }).ToList();
+
+            return View(userClaimsList);
+        }
+        [Authorize(Policy = "AnkaraPolicy")]
+        [HttpGet]
+        public IActionResult AnkaraPage()
+        {
+
+            return View();
+
+        }
+        public IActionResult AccessDenied(string returnUrl)
+        {
+            string message = string.Empty;
+            message = " Bu sayfaya Erişim Yetkiniz Yoktur. Yetki Almak için yöneticinizle konuşunuz";
+            
+            ViewBag.message = message;
+            return View();
+        }
+        
     }
+    
+    
+    
+    
+    
+    
+    
 }
