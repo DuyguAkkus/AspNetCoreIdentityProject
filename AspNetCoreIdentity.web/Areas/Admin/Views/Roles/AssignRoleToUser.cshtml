@@ -1,0 +1,97 @@
+@{
+    ViewData["Title"] = "AssignRoleToUser";
+}
+@model List<AdminModel.AssignRoleToUserViewModel>
+
+<div class="container mt-0"> <!-- Formu yukarı taşımak için mt-5 yerine mt-3 kullanıldı -->
+    <h2 class="text-center fw-bold mb-4 text-danger">Kullanıcıya Rol Atama</h2>
+
+    <form asp-action="AssignRoleToUser" asp-route-userId="@ViewBag.userId" method="post" class="p-4 rounded bg-white shadow-sm">
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <div class="mb-3 form-check d-flex align-items-center justify-content-start">
+                <input type="checkbox" class="form-check-input custom-checkbox me-2" asp-for="@Model[i].Exist">
+                <label class="form-check-label fw-bold" for="exampleCheck1">@Model[i].Name</label>
+                <input type="hidden" asp-for="@Model[i].Name">
+                <input type="hidden" asp-for="@Model[i].Id">
+            </div>
+        }
+
+        <div class="text-center mt-4">
+            <input type="submit" value="Rol Ata" class="btn custom-btn-pink px-4 py-2 fw-bold" />
+        </div>
+
+    </form>
+
+    <div class="text-center mt-3">
+        <a asp-controller="Home" asp-action="UserList" class="btn custom-btn-secondary px-4 py-2">Kullanıcı listesine geri dön</a>
+    </div>
+</div>
+
+<!-- 🚀 CSS -->
+<style>
+    /* 🌸 Sayfanın genel görünümü */
+    body {
+        background-color: #f8f9fa;
+    }
+
+    /* 🌸 Formun iç içe kart gibi görünmesini engelleme */
+    .container {
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    /* 🌸 Başlık rengi */
+    h2 {
+        color: #d13250;
+        font-weight: bold;
+    }
+
+    /* 🌸 Pembe Buton */
+    .custom-btn-pink {
+        background-color: #d13250 !important;
+        border: none;
+        color: white !important;
+        transition: all 0.3s ease-in-out;
+        border-radius: 8px;
+    }
+
+    .custom-btn-pink:hover {
+        background-color: #f57288 !important;
+        color: white !important;
+    }
+
+    /* 🌸 Geri Dön Butonu */
+    .custom-btn-secondary {
+        background-color: #ffd1dc !important;
+        border: none;
+        color: black !important;
+        transition: all 0.3s ease-in-out;
+        border-radius: 8px;
+    }
+
+    .custom-btn-secondary:hover {
+        background-color: #ffbacb !important;
+        color: black !important;
+    }
+
+    /* 🌸 Checkbox Stili */
+    .custom-checkbox {
+        transform: scale(1.3); /* Checkbox'ları biraz büyütme */
+        margin-right: 10px;
+    }
+
+    /* 🌸 Checkbox işaretleme rengi */
+    .form-check-input:checked {
+        background-color: #d13250 !important;
+        border-color: #d13250 !important;
+    }
+
+    /* 🌸 Checkbox yazısını daha belirgin hale getir */
+    .form-check-label {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #444;
+    }
+</style>

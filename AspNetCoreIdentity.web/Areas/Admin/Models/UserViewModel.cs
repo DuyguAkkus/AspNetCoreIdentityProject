@@ -7,5 +7,7 @@ namespace AspNetCoreIdentitiy.web.Areas.Admin.Models
         public string? Name { get; set; } = string.Empty; // Name yerine UserName olarak değiştirildi
         
         public string? Email { get; set; } = string.Empty; // Nullable yerine boş string atandı
+        
+        public List<string> Roles { get; set; } = new List<string>(); // Kullanıcının rolleri
     }
 }

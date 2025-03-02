@@ -8,13 +8,15 @@
 <h2 class="text-center mt-4">@ViewBag.Title</h2> <!-- Başlığı ortaladık -->
 
 <div class="container mt-4">
-    <table class="table">
+    <table class="table table-hover text-center shadow-sm">
         <thead class="table-light">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Kullanıcı Id</th>
             <th scope="col">Kullanıcı Adı</th>
             <th scope="col">Email</th>
+            <th scope="col">Rol Adı</th>
+            <th scope="col">Rol İşlemleri</th>
         </tr>
         </thead>
         <tbody>
@@ -25,8 +27,74 @@
                 <td>@item.Id</td>
                 <td>@item.Name</td>
                 <td>@item.Email</td>
+                <td>
+                    @if (item.Roles != null && item.Roles.Any())
+                    {
+                        @foreach (var role in item.Roles)
+                        {
+                            <span class="role-badge">@role</span>
+                        }
+                    }
+                    else
+                    {
+                        <span class="text-muted">Rol atanmadı</span>
+                    }
+                </td>
+
+                <td>
+                    <!-- 🚀 Güncellenmiş "Rol Ata" Butonu -->
+                    <a class="btn custom-btn-pink btn-sm"
+                       asp-controller="Roles"
+                       asp-action="AssignRoleToUser"
+                       asp-route-id="@item.Id">
+                        Rol Ata
+                    </a>
+                </td>
             </tr>
         }
         </tbody>
     </table>
 </div>
+
+<!-- 🚀 CSS -->
+<style>
+    .table thead th {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa !important;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* 🌸 Kullanıcı Rolleri için Badge Stili */
+    .role-badge {
+        display: inline-block;
+        background-color: #d13250;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-right: 4px;
+    }
+
+    /* 🌸 Güncellenmiş "Rol Ata" Butonu */
+    .custom-btn-pink {
+        background-color: #d13250 !important; /* Pembe buton */
+        border: none;
+        color: white !important;
+        font-size: 1rem; /* Yazı boyutunu standart hale getirdik */
+        transition: all 0.3s ease-in-out;
+        border-radius: 6px;
+        padding: 6px 10px;
+        font-weight: 500;
+    }
+
+    .custom-btn-pink:hover {
+        background-color: #f57288 !important; /* Açık pembe */
+        color: white !important;
+    }
+</style>

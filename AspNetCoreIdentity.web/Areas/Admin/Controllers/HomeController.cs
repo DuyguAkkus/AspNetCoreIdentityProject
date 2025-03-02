@@ -22,16 +22,24 @@ public class HomeController : Controller
     
     public async Task<IActionResult> UserList()
     {
-        var userList = await _UserManager.Users.ToListAsync();
-    
-        var userViewModelList = userList.Select(x => new UserViewModel
-        {
-            Id = x.Id, 
-            Email = x.Email,
-            Name = x.UserName 
-        }).ToList(); 
+        var userList = await _UserManager.Users.ToListAsync(); // Kullanıcıları getiriyoruz.
 
-        return View(userViewModelList); // Modeli View'e gönder
+        var userViewModelList = new List<UserViewModel>();
+
+        foreach (var user in userList)
+        {
+            var roles = await _UserManager.GetRolesAsync(user); // Kullanıcının rollerini çekiyoruz.
+
+            userViewModelList.Add(new UserViewModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Name = user.UserName,
+                Roles = roles.ToList() // Kullanıcının rollerini ekledik.
+            });
+        }
+
+        return View(userViewModelList); // Modeli View'e gönderiyoruz.
     }
 
 }
