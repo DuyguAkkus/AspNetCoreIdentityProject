@@ -172,6 +172,19 @@ namespace AspNetCoreIdentitiy.Web.Controllers
             return View();
 
         }
+        public IActionResult StudentPage()
+        {
+
+            return View();
+
+        }
+        public IActionResult TeacherPage()
+        {
+
+            return View();
+
+        }
+      
         public IActionResult AccessDenied(string returnUrl)
         {
             string message = string.Empty;

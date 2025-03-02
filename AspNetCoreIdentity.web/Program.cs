@@ -21,6 +21,8 @@ builder.Services.AddControllersWithViews(); // MVC kullanımı için gerekli ser
 builder.Services.AddAuthorization(option =>
 {
     option.AddPolicy("AnkaraPolicy", policy => policy.RequireClaim("city", "Ankara", "manisa"));
+    option.AddPolicy("StudentPolicy", policy => policy.RequireClaim("rol", "öğrenci"));
+
 });
 
 //bir policy içinde birden fazla kueral olabilir,
