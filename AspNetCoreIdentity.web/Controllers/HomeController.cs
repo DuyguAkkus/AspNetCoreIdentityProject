@@ -21,6 +21,7 @@ namespace AspNetCoreIdentitiy.web.Controllers
         }
 
         public IActionResult Index() => View();
+        public IActionResult About() => View();
         public IActionResult Privacy() => View();
         public IActionResult SignUp() => View();
         
