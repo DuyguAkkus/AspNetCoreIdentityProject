@@ -184,6 +184,11 @@ namespace AspNetCoreIdentitiy.Web.Controllers
             return View();
 
         }
+
+        public IActionResult CertificatePage()
+        {
+            return View();
+        }
       
         public IActionResult AccessDenied(string returnUrl)
         {

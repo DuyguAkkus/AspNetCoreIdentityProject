@@ -45,6 +45,9 @@
                     <a   asp-controller="Member" asp-action="StudentPage" class="dropdown-item">
                         Derslerim
                     </a>
+                    <a   asp-controller="Member" asp-action="CertificatePage" class="dropdown-item">
+                        Sertifikalarım
+                    </a>
                 }
                 
                 @if (User.HasClaim(x => x.Type == ClaimTypes.Role  && x.Value == "Admin"))
