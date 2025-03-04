@@ -20,11 +20,24 @@ namespace AspNetCoreIdentitiy.web.Controllers
             _signInManager = signInManager;
         }
 
-        public IActionResult Index() => View();
+        public async Task<IActionResult> Index()
+        {
+            if (User.Identity?.IsAuthenticated ?? false) // Kullanıcı giriş yapmış mı?
+            {
+                var currentUser = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (currentUser != null)
+                {
+                    var roles = await _userManager.GetRolesAsync(currentUser);
+                    ViewBag.UserName = currentUser.UserName;
+                    ViewBag.UserRole = roles.Count > 0 ? roles[0] : "Üye"; // İlk rolü al, yoksa "Üye" göster
+                }
+            }
+            return View();
+        }
+
         public IActionResult About() => View();
         public IActionResult Privacy() => View();
         public IActionResult SignUp() => View();
-        
         public IActionResult SignIn() => View();
 
         [HttpPost]
@@ -40,26 +53,20 @@ namespace AspNetCoreIdentitiy.web.Controllers
                 request.ConfirmPassword
             );
 
-
             if (!identityResult.Succeeded)
             {
                 ModelState.AddModelErrorList(identityResult.Errors.Select(x => x.Description).ToList());
                 return View();
             }
 
-
-
-            TempData["SuccessMessage"] = "Üyelik kayıt işlemi başarıla gerçekleşmiştir.";
-
+            TempData["SuccessMessage"] = "Üyelik kayıt işlemi başarıyla gerçekleşmiştir.";
             return RedirectToAction(nameof(HomeController.SignUp));
         }
-
-
 
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInViewModel model, string? returnUrl = null)
         {
-            returnUrl ??= Url.Action("Index", "Home"); // Eğer `returnUrl` boşsa, `/Member/Index`'e yönlendir
+            returnUrl ??= Url.Action("Index", "Home"); // Eğer `returnUrl` boşsa `/Member/Index`'e yönlendir
 
             if (!ModelState.IsValid)
             {

@@ -4,5 +4,14 @@
 
 <div class="text-center">
     <h1 class="display-4">Hoş Geldiniz</h1>
-  
+
+    @if (!string.IsNullOrEmpty(ViewBag.UserName)) // Kullanıcı giriş yapmışsa
+    {
+        <p>Merhaba, <strong>@ViewBag.UserName</strong>!</p>
+        <p>Rolünüz: <span class="badge bg-primary">@ViewBag.UserRole</span></p>
+    }
+    else
+    {
+        <p>Lütfen giriş yapınız.</p>
+    }
 </div>

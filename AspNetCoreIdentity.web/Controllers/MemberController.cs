@@ -37,6 +37,8 @@ namespace AspNetCoreIdentitiy.Web.Controllers
                 return NotFound("Kullanıcı bulunamadı.");
             }
 
+            var userRoles = await _userManager.GetRolesAsync(currentUser); // Kullanıcının rollerini al
+
             var userViewModel = new UserViewModels
             {
                 Email = currentUser.Email ?? "Email bulunamadı",
@@ -44,11 +46,13 @@ namespace AspNetCoreIdentitiy.Web.Controllers
                 UserName = currentUser.UserName ?? "Kullanıcı adı bulunamadı",
                 PictureUrl = string.IsNullOrEmpty(currentUser.Picture) 
                     ? "/userPictures/default_user.jpg" 
-                    : $"/userPictures/{currentUser.Picture}" // ✅ Dosya adı kaydedildiği için yolu birleştiriyoruz.
+                    : $"/userPictures/{currentUser.Picture}",
+                Roles = string.Join(", ", userRoles) // Kullanıcının rollerini string olarak ekle
             };
 
             return View(userViewModel);
         }
+
 
         public async Task<IActionResult> UserEdit()
         {
@@ -172,12 +176,14 @@ namespace AspNetCoreIdentitiy.Web.Controllers
             return View();
 
         }
+        [Authorize(Roles = "Öğrenci")] 
         public IActionResult StudentPage()
         {
 
             return View();
 
         }
+        [Authorize(Roles = "eğitmen ")] 
         public IActionResult TeacherPage()
         {
 
