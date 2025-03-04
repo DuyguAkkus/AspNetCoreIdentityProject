@@ -42,34 +42,44 @@
                 </li>
                 @if (User.HasClaim(x => x.Type == ClaimTypes.Role  && x.Value == "Öğrenci"))
                 {
-                    <a   asp-controller="Member" asp-action="StudentPage" class="dropdown-item">
-                        Derslerim
-                    </a>
+                    <li>
+                        <a   asp-controller="Member" asp-action="StudentPage" class="dropdown-item">
+                            Derslerim
+                        </a>
+                    </li>
+                    <li>
                     <a   asp-controller="Member" asp-action="CertificatePage" class="dropdown-item">
                         Sertifikalarım
                     </a>
+                    </li>
                 }
                 
                 @if (User.HasClaim(x => x.Type == ClaimTypes.Role  && x.Value == "Admin"))
                 {
-                    <a  asp-area="Admin"  asp-controller="Home" asp-action="Index" class="dropdown-item">
-                        Admin Paneli
-                    </a>
-                 
+                    <li>
+                        <a  asp-area="Admin"  asp-controller="Home" asp-action="Index" class="dropdown-item">
+                            Admin Paneli
+                        </a>
+                    </li>
+                    <li>
                     <a   asp-controller="Member" asp-action="Claims" class="dropdown-item">
                         Claims
                     </a>
+                    </li>
                     
                 }
                
                 @if (User.HasClaim(x => x.Type == ClaimTypes.Role  && x.Value == "eğitmen"))
                 {
+                    <li>
                     <a   asp-controller="Member" asp-action="TeacherPage" class="dropdown-item">
                         Öğrenclerim
                     </a>
+                    </li>
                 }
                 <li>
-                    <a  asp-controller="Member" asp-action="Logout" class="dropdown-item">
+              
+                    <a asp-controller="Member" asp-action="Logout" class="dropdown-item">
                         Çıkış Yap
                     </a>
                 </li>
