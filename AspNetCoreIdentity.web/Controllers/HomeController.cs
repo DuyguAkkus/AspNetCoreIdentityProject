@@ -60,7 +60,7 @@ namespace AspNetCoreIdentitiy.web.Controllers
             }
 
             TempData["SuccessMessage"] = "Üyelik kayıt işlemi başarıyla gerçekleşmiştir.";
-            return RedirectToAction(nameof(HomeController.SignUp));
+            return RedirectToAction(nameof(HomeController.SignIn));
         }
 
         [HttpPost]
