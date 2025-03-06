@@ -9,16 +9,39 @@ public class RoleSeeder
     {
         var roles = new List<AppRole>
         {
-            new AppRole { Name = "Admin", NormalizedName = "ADMIN", AuthorityLevel = 2 },
-            new AppRole { Name = "Teacher", NormalizedName = "TEACHER", AuthorityLevel = 3 },
-            new AppRole { Name = "Student", NormalizedName = "STUDENT", AuthorityLevel = 4 }
+            new AppRole { Name = "Admin", AuthorityLevel = 2 },
+            new AppRole { Name = "Teacher", AuthorityLevel = 3 },
+            new AppRole { Name = "Student", AuthorityLevel = 4 }
         };
 
         foreach (var role in roles)
         {
-            if (!await roleManager.RoleExistsAsync(role.Name))
+            var existingRole = await roleManager.FindByNameAsync(role.Name);
+            if (existingRole == null)
             {
+                role.ConcurrencyStamp = Guid.NewGuid().ToString(); // ✅ ConcurrencyStamp set ediliyor
                 await roleManager.CreateAsync(role);
+            }
+            else
+            {
+                bool updated = false;
+
+                if (existingRole.AuthorityLevel != role.AuthorityLevel)
+                {
+                    existingRole.AuthorityLevel = role.AuthorityLevel;
+                    updated = true;
+                }
+
+                if (string.IsNullOrEmpty(existingRole.ConcurrencyStamp))
+                {
+                    existingRole.ConcurrencyStamp = Guid.NewGuid().ToString(); // ✅ Eğer NULL ise set et
+                    updated = true;
+                }
+
+                if (updated)
+                {
+                    await roleManager.UpdateAsync(existingRole);
+                }
             }
         }
     }

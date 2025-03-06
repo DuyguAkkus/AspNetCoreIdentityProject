@@ -46,12 +46,24 @@ build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL19W
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Areas/Admin/Views/Forms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRm9ybXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Areas/Admin/Views/Home/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSG9tZS9Vc2VyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Areas/Admin/Views/Lessons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvTGVzc29ucy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Areas/Admin/Views/Menus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvTWVudXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Areas/Admin/Views/Roles/AssignRoleToUser.cshtml]
@@ -76,6 +88,34 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Student/Views/Certificates/MyCertificates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = U3R1ZGVudC9WaWV3cy9DZXJ0aWZpY2F0ZXMvTXlDZXJ0aWZpY2F0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Student/Views/Exams/MyExams.cshtml]
+build_metadata.AdditionalFiles.TargetPath = U3R1ZGVudC9WaWV3cy9FeGFtcy9NeUV4YW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Student/Views/Home/StudentIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = U3R1ZGVudC9WaWV3cy9Ib21lL1N0dWRlbnRJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Student/Views/Lessons/StudentLessons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = U3R1ZGVudC9WaWV3cy9MZXNzb25zL1N0dWRlbnRMZXNzb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Teacher/Views/Home/TeacherIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVhY2hlci9WaWV3cy9Ib21lL1RlYWNoZXJJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Teacher/Views/Lessons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVhY2hlci9WaWV3cy9MZXNzb25zL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Teacher/Views/Lessons/MyLeassons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVhY2hlci9WaWV3cy9MZXNzb25zL015TGVhc3NvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/duyguakkus/RiderProjects/AspNetCoreIdentitiy.web/AspNetCoreIdentity.web/Views/Home/About.cshtml]

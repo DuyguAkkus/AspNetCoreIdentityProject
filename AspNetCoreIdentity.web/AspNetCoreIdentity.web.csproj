@@ -23,17 +23,24 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Areas\Admin\Data\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <AdditionalFiles Include="Areas\Admin\Views\Shared\Error.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml" />
+      <AdditionalFiles Include="Areas\Student\Views\Certificates\MyCertificates.cshtml" />
+      <AdditionalFiles Include="Areas\Student\Views\Exams\MyExams.cshtml" />
+      <AdditionalFiles Include="Areas\Student\Views\Home\StudentIndex.cshtml" />
+      <AdditionalFiles Include="Areas\Student\Views\Lessons\StudentLessons.cshtml" />
+      <AdditionalFiles Include="Areas\Teacher\Views\Home\TeacherIndex.cshtml" />
+      <AdditionalFiles Include="Areas\Teacher\Views\Lessons\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Teacher\Views\Lessons\MyLeassons.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Areas\Admin\Pages\Home\UserList.cshtml" />
+      <_ContentIncludedByDefault Remove="Student\Views\Certificates\MyCertificates.cshtml" />
+      <_ContentIncludedByDefault Remove="Student\Views\Exams\MyExams.cshtml" />
+      <_ContentIncludedByDefault Remove="Student\Views\Home\StudentIndex.cshtml" />
+      <_ContentIncludedByDefault Remove="Student\Views\Lessons\StudentLessons.cshtml" />
     </ItemGroup>
 
 </Project>

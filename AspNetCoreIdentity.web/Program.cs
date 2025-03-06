@@ -100,6 +100,11 @@ using (var scope = app.Services.CreateScope())
     await RoleSeeder.SeedRoles(roleManager); // ✅ Doğru şekilde çağırıldı!
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await MenuSeeder.SeedMenus(context); // 📌 Menüleri veritabanına ekle
+}
 
 
 app.Run();
