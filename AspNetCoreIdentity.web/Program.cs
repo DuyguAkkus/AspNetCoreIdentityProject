@@ -1,4 +1,5 @@
 using AspNetCoreIdentitiy.web.ClaimsProvider;
+using AspNetCoreIdentitiy.web.Data;
 using Microsoft.EntityFrameworkCore;
 using AspNetCoreIdentitiy.web.Models; // AppDbContext için gerekli namespace
 using AspNetCoreIdentitiy.web.Extenisons;
@@ -93,5 +94,12 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<AppRole>>();
+    await RoleSeeder.SeedRoles(roleManager); // ✅ Doğru şekilde çağırıldı!
+}
+
+
 
 app.Run();
